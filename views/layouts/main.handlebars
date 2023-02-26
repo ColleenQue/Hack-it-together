@@ -44,7 +44,11 @@
         <li><a href="/questions">Interview Questions</a></li>
         {{/if}}
 
-
+        {{#if library}}
+        <li><a class="active" href="/library">Libraries</a></li>
+        {{else}}
+        <li><a href="/library">Libraries</a></li>
+        {{/if}}
 
     </ul>
 
