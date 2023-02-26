@@ -58,6 +58,25 @@
   font-size: 13px;
   font-weight: 300;
 }
+
+
+  button {
+    background-color: rgba(255,255,255,0.8);
+    color:rgb(0, 0, 0);
+    border: 2px solid #99ddda;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  button:hover {
+    cursor:pointer;
+    color:white;
+    background-color: #343A40
+}
   
   /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
   ul.topnav {
@@ -216,6 +235,7 @@
   .dark-mode ul.topnav #darkMode.active {
     background-color: rgb(201, 89, 110);
   }
+
   
   /*art gallary*/
   .art {
@@ -225,20 +245,6 @@
     height: 500px;
   }
   
-  /*table*/
-  
-  table, th, td {
-    border:1px solid black;
-  }
-  
-  .dark-mode table, .dark-mode th,.dark-mode td {
-    border:1px solid white;
-  }
-  
-  table, th, td {
-    border:1px solid black;
-  }
-
   form{
     text-align: center;
 }
