@@ -59,9 +59,9 @@
   font-weight: 300;
 }
 
+
   button {
     background-color: rgba(255,255,255,0.8);
-    
     color:rgb(0, 0, 0);
     border: 2px solid #99ddda;
     padding: 10px 25px;
@@ -249,13 +249,15 @@
     text-align: center;
 }
 
+
+  
+/*copied from signup **/
+/*
 #login-form label, #login-form button {
     margin:2px 0 20px 10px;
     font-weight: bold;
   }
-  
-/*copied from signup **/
-/*
+
 #login-form input{
     display: block;
     font-size:11px;
