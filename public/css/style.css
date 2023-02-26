@@ -2,33 +2,15 @@
 
 
   body {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Nunito Sans', sans-serif;
-    background-color: azure;
-    
-  }
-  
-  /*canvas*/
-  
-  .middle{
-    text-align:center;
-    resize: both;
-    overflow: auto;
+    background-color: #f0ffff;
   }
 
-  #welcome{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size:300%;
-  
-    transform: translate(-50%, -50%);
-  }
-  #canvas1{
-    width:100%;
-    position:absolute;
-    height:100%;
+  .main-banner {
+    background: rgb(240,255,255);
+    background: linear-gradient(0deg, rgba(240,255,255,1) 0%, rgba(153,221,218,0.3) 100%);
   }
 
   #map {
@@ -115,15 +97,23 @@
   h1 {
     color: black;
     text-align: center;
-    line-height: 200px;
+    padding: 20px;
     font-size:50px;
     
+  }
+
+  #logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
   #slogan {
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
     font-size: 400%;
+    padding: 50px 0px;
     text-shadow: 4px 2px #99ddda;
   }
 
@@ -145,6 +135,7 @@
 
   .text-format { /* General formatting for body text */
     margin-left: 10%;
+    margin-right: 10%;
     font-size: 110%;
     line-height: 150%;
   }
