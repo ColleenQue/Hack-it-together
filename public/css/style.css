@@ -1,9 +1,11 @@
 body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
+    background-color: azure;
+    
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap');
 
   /*canvas*/
   
@@ -59,7 +61,7 @@ body {
     padding: 14px 25px;
     text-decoration: none;
     font: Andale Mono;
-    font-size: 150%;
+    font-size: 120%;
   }
   
   ul.topnav li a:hover:not(.active),
@@ -114,7 +116,6 @@ body {
     text-align: center;
     line-height: 200px;
     font-size:50px;
-    
   }
 
 
@@ -124,8 +125,14 @@ body {
   
   h2{
     color: black;
-    text-align: center;
-    
+    font-weight: 200;
+    font-size: 36px;
+  }
+
+  .text-format { /* General formatting for body text */
+    margin-left: 10%;
+    font-size: 110%;
+    line-height: 150%;
   }
   
   a{
