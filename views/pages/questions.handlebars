@@ -1,20 +1,32 @@
-<h1>Questions</h1>
-<hr />
+
 <div class="text-format">
-<h1>Interview Questions</h1>
-<ul>
-    <h2> Interview questions:</h2>
-       <li>{{{listz.[0]}}}</li>
-       <li>{{{listz.[1]}}}</li>
-       <li>{{{listz.[2]}}}</li>
-       <li>{{{listz.[4]}}}</li>
-       <li>{{{listz.[5]}}}</li>
-</ul>
-<a href="/questions">
-  <button type="button" id="my-button">Questions</button>
-</a>
+    <h1>Interview Questions</h1>
+    <ul>
+        <h2> Interview questions:</h2>
+        <li>{{{listz.[0]}}}</li>
+        <li>{{{listz.[1]}}}</li>
+        <li>{{{listz.[2]}}}</li>
+        <li>{{{listz.[4]}}}</li>
+        <li>{{{listz.[5]}}}</li>
+    </ul>
+    <a href="/questions">
+        <button type="button" id="my-button">Questions</button>
+    </a>
+    <br>
 
 
-<input type="text" id="comment-box">
-<button id="submit-button">Submit</button>
+    {{!-- I love chat gpt --}}
+<script>
+  window.onload = function() {
+    var savedTextareaContent = localStorage.getItem('autosave-textarea');
+    if (savedTextareaContent !== null) {
+      document.getElementById('autosave-textarea').value = savedTextareaContent;
+    }
+  }
+</script>
 
+        <label for="autosave-textarea">Write Down Your Notes Here:</label>
+        <br>
+        <textarea id="autosave-textarea" name="autosave-textarea" rows="10" cols="80"
+            oninput="localStorage.setItem('autosave-textarea', this.value)"></textarea>
+ 
