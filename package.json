@@ -23,5 +23,8 @@
         "handlebars": "^4.7.7",
         "jquery": "^3.6.0",
         "serve": "^14.0.1"
+    },
+    "devDependencies": {
+        "@types/google.maps": "^3.52.0"
     }
 }
