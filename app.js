@@ -22,6 +22,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("We've now got a server!");
   console.log(`server started on port ${PORT}`);
+  console.log('Your routes will be running on http://localhost:3000');
 });
 
 
