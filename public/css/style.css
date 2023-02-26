@@ -1,459 +1,222 @@
-.container {
-    max-width: 960px;
-}
-
-/*
- * Fonts
- */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
-
-@import url(//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style);
-@font-face {
-    font-family: "Bitstream Iowan Old Style";
-    src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot");
-    src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot?#iefix")
-            format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff2")
-            format("woff2"),
-        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff")
-            format("woff"),
-        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.ttf")
-            format("truetype"),
-        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.svg#Bitstream Iowan Old Style")
-            format("svg");
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-
-/* 
- * General
- */
-
-html {
-    scroll-behavior: smooth;
-}
-
-div {
-    font-family: "Bitstream Iowan Old Style";
-}
-
-/*
- * Navbar
- */
-
-/*
- * Custom translucent site header
- */
-
-.navbtn {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: normal;
-    text-align: center;
-    height: 25px;
-    width: 75px;
-}
-
-.site-header {
-    height: 51px;
-    background-color: rgba(0, 0, 0, 0.85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-    padding: 12px 25px;
-    color: black;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    transition: color 0.15s ease-in-out;
-    text-decoration: none;
-}
-
-.site-header a:hover {
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: #46b1c9;
-}
-
-
-
-/*
- * login
- */
-.create_account{
-    text-align: center;
-}
-.create_account a{
-    color: rgb(255,140,0);
-    text-align: center;
-}
-.create_account a:link{
-    text-decoration: none;
-    color: black;
-}
-.create_account a:hover{
-    text-decoration: none;
-    text-decoration: underline;
-}
-.login_btn{
-    margin-top: 30px;
-    text-align: center;
-}
-
-
-
-
-
-/*
- * Play
- */
-
- /*Spelling Play*/
-
-
-.choice {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-}
-
-.selected {
-    background-color: #46b1c9;
-    color: #fbfbf5;
-    border: none;
-}
-
-.wrong-selected {
-    background-color: #9c9fa0;
-    color: #fbfbf5;
-    border: none;
-}
-
-#note-image {
-    height: 350px;
-}
-
-.col,
-#display-message {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-}
-
-#next-question {
-    width: 300px;
-    height: 50px;
-    font-family: "Inter", sans-serif;
-    margin: 0 auto;
-}
-
-.card-title {
-    text-align: center;
-}
-
-/*
- * About
- */
-.pfp {
-    height: 6vw;
-}
-
-/*
- * Extra utilities
- */
-
-.flex-equal > * {
-    flex: 1;
-}
-@media (min-width: 768px) {
-    .flex-md-equal > * {
-        flex: 1;
-    }
-}
-
-/*
- * Specifics
- */
-
-#logo {
-    font-family: 'Oleo Script', cursive;
-    font-weight: 400;
-}
-
-/* 
-  Button Styling 
-*/
-
-.primary-btn {
-    padding: 0;
-    margin: 0 10px;
-    background-color: #393e41;
-    color: #ffffff;
-    border: none;
-}
-
-.primary-btn:hover {
-    background-color: #6b6e71;
-    color: #ffffff;
-}
-
-.primary-btn:active {
-    background-color: #2b2f31;
-    color: #ffffff;
-}
-
-.secondary-btn {
-    padding: 0;
-    margin: 0 10px;
-    background-color: #fbfbf5;
-    color: #000000;
-    border: 1px solid #393e41;
-}
-
-.secondary-btn:hover {
-    background-color: #f6f7eb;
-    color: #000000;
-}
-
-.secondary-btn:active {
-    background-color: #e7e8de;
-    color: #000000;
-}
-
-.sidenav {
-    height: 500px;
-    width: 360px;
-    position: fixed;
-    top: 110px;
-    left: 0;
-    background-color: #f8f9f0;
-    /* overflow-x: hidden; */
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    color: black;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    transition: color 0.15s ease-in-out;
-    text-decoration: none;
-}
-
-.sidebar-left-header {
-    padding-left: 10px;
-}
-
-#sidebar-left {
-    padding-left: 10px;
-}
-
-img {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-/* 
-.red {
-    background-color: red;
-} */
-
-#learnContent {
-    padding-left: 380px;
-}
-
-#piano {
-    height: 500px;
-}
-
-.result-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-note {
-    margin-right: 20px;
-}
-
-/* .result-div {
-} */
-
-.right-note {
-    margin-left: 20px;
-}
-/*
-#visibility{
-    position:absolute;
-    left:250px;
-    top:-90px;
-}
-*/
-
-#visibility1, #visibility2{
-    position:absolute;
-    left:85%;
-    margin-top: 2.5%;
-}
-
-#visibility3{
-    position:absolute;
-    left:85%;
-    margin-top: 2.5%;
-}
-
-.pText{
-    display:inline;
-}
-
-.pAs{
-    color:red;
-    display:inline;
-}
-
-#positionEye1, #positionEye2,#positionEye3{
-    position: relative;
-}
-
-.spelling-main{
-    display: flex;
-}
-
-.spelling_body{
-
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 5px;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-    margin-top: 10%;
-    
-
-
-}
-
-
-/* CSS */
-.button-spelling{
-  background-color: rgb(88, 172, 71);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  margin: 0;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  transition: color 100ms;
-  vertical-align: baseline;
-  touch-action: manipulation;
-}
-
-.button-spelling:hover,
-.button-spelling:focus {
-  background-color: rgb(88, 172, 71);
-}
-
-.spelling_image{
-    border-radius: 100% 100% 98% 0% / 45% 0% 36% 100%;
-    padding: 5px;
-    position: fixed;
-    bottom: 50%;
-    right: 1%;
-    width: 300px;
-}
-
-.spelling_middle_image{
-    border-radius: 100% 100% 98% 100% / 100% 100% 100% 100%;
-    padding: 5px;
-    position: fixed;
-    bottom: 1%;
-    left: 40%;
-    width: 300px;
-
-}
-
-.spelling_left_image{
-    border-radius: 100% 100% 98% 100% / 100% 100% 100% 100%;
-    padding: 5px;
-    position: fixed;
-    bottom: 40%;
-    left: 2.5%;
-    width: 300px;
-
-}
-
-
-.spellingInput{
-	padding: 0;
-	width: 7*(1ch + .5ch);
-	background: repeating-linear-gradient(90deg, 
-		dimgrey 0, dimgrey 1ch, 
-		transparent 0, transparent 1ch + .5ch);
-	letter-spacing: 0.5ch;
-}
-
-
-
-
-/* payment */
-.paymentsubmission{
-    display: inline-block;
-    padding:0.3em 1.2em;
-    margin:0 0.1em 0.1em 0;
-    border:0.16em solid rgba(255,255,255,0);
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    background-color:rgb(88, 172, 71);
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    text-align:center;
-    transition: all 0.2s;
-    }
-.paymentsubmission:hover{
-    border-color: rgba(255,255,255,1);
-}
-
-.leaderTable{
-    display: inline-block;
-  text-align: center;
-  font-size: 30px;
+body {
+    margin: 0;
+  }
   
-}
-
-.leaderContainer{
+  /*canvas*/
+  
+  .middle{
     text-align:center;
-    padding: 100px 0;
-}
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
+    resize: both;
+    overflow: auto;
+  }
 
-.err {
-    color: red
-}
-
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+  #welcome{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:300%;
+  
+    transform: translate(-50%, -50%);
+  }
+  #canvas1{
+    width:100%;
+    position:absolute;
+    height:100%;
+  }
+  
+  /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #343A40;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  ul.topnav li {
+    float: left;
+  }
+  
+  
+  ul.topnav li a,
+  ul.topnav #darkMode {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font: Andale Mono;
+    font-size: 150%;
+  }
+  
+  ul.topnav li a:hover:not(.active),
+  ul.topnav #darkMode:hover:not(.active) {
+    background-color: #2a2d31;
+    cursor: pointer;
+  }
+  
+  ul.topnav li a.active,
+  ul.topnav #darkMode.active {
+    background-color: #2a2d31;;
+  }
+  
+  ul.topnav li.right {
+    float: right;
+  }
+  
+  @media screen and (max-width: 900px) {
+    ul.sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
     }
+  
+    ul.sidenav li a {
+      float: left;
+      padding: 15px;
+    }
+  
+    div.content {
+      margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    ul.sidenav li a {
+      text-align: center;
+      float: none;
+    }
+  }
+  
+  
+  
+  /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+  .main-body {
+    margin: 20px;
+  }
+  
+  
+  h1 {
+    color: black;
+    text-align: center;
+    line-height: 200px;
+    font-size:50px;
+    
+  }
+
+
+  .right{
+    float: right;
+  }
+  
+  h2{
+    color: black;
+    text-align: center;
+    
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgb(120, 79, 255);
+  }
+  
+  /*dark-mode*/
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  
+  .dark-mode a {
+    color: rgb(167, 140, 255);
+  }
+  
+  
+  #darkButton {
+    float: right;
+  }
+  
+  .dark-mode ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(112, 30, 45);
+    color: white;
+  }
+  
+  
+  .dark-mode ul.topnav li a.active,
+  .dark-mode ul.topnav #darkMode.active {
+    background-color: rgb(201, 89, 110);
+  }
+  
+  
+  
+  /*style for resume*/
+  #resume-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*art gallary*/
+  .art {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 500px;
+  }
+  
+  /*table*/
+  
+  table, th, td {
+    border:1px solid black;
+  }
+  
+  .dark-mode table, .dark-mode th,.dark-mode td {
+    border:1px solid white;
+  }
+  
+  table, th, td {
+    border:1px solid black;
+  }
+
+  form{
+    text-align: center;
 }
+
+#login-form label, #login-form button {
+    margin:2px 0 20px 10px;
+    font-weight: bold;
+  }
+  
+/*copied from signup **/
+/*
+#login-form input{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    width:250px;
+    margin:2px 0 20px 10px;
+  }
+  
+  #login-form label, #login-form button {
+    margin:2px 0 20px 10px;
+    font-weight: bold;
+  }
+  
+  #login-form h1{
+    margin-top: 50px;
+  }
+  
+  #login-form p {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  */
