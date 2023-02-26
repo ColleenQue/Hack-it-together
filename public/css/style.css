@@ -1,10 +1,13 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Nunito+Sans:wght@200;400&display=swap');
+
+
+  body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
+    background-color: azure;
+    
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
   /*canvas*/
   
   .middle{
@@ -59,7 +62,7 @@ body {
     padding: 14px 25px;
     text-decoration: none;
     font: Andale Mono;
-    font-size: 150%;
+    font-size: 120%;
   }
   
   ul.topnav li a:hover:not(.active),
@@ -117,6 +120,18 @@ body {
     
   }
 
+  #slogan {
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 400%;
+    text-shadow: 4px 2px #99ddda;
+  }
+
+  hr {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .right{
     float: right;
@@ -124,8 +139,14 @@ body {
   
   h2{
     color: black;
-    text-align: center;
-    
+    font-weight: 400;
+    font-size: 36px;
+  }
+
+  .text-format { /* General formatting for body text */
+    margin-left: 10%;
+    font-size: 110%;
+    line-height: 150%;
   }
   
   a{
