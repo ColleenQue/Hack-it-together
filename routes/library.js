@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('', async (req, res) => {
       
       
-  res.render('pages/home',{homePage:true});
+  res.render('pages/library',{library:true});
 
 });
 
