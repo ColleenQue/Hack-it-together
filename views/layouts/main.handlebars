@@ -42,12 +42,16 @@
         {{/if}}
 
         {{#if questions}}
-        <li><a class="active" href="/questions">Questions</a></li>
+        <li><a class="active" href="/questions">Interview Questions</a></li>
         {{else}}
-        <li><a href="/questions">Questions</a></li>
+        <li><a href="/questions">Interview Questions</a></li>
         {{/if}}
 
-
+        {{#if library}}
+        <li><a class="active" href="/library">Libraries</a></li>
+        {{else}}
+        <li><a href="/library">Libraries</a></li>
+        {{/if}}
 
     </ul>
 
@@ -58,6 +62,7 @@
      <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src='/public/scripts/button.js'></script>
+
 
 </body>
 
