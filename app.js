@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 
 configRoutes(app);
 
-
+/*
 const PORT = process.env.PORT || 3030;
 
 
@@ -23,11 +23,11 @@ app.listen(PORT, () => {
   console.log("We've now got a server!");
   console.log(`server started on port ${PORT}`);
 });
+*/
 
 
 
 
-
-//  app.listen(3000, function(){
-//   console.log('Your routes will be running on http://localhost:3000');
-//  });
+  app.listen(3000, function(){
+  console.log('Your routes will be running on http://localhost:3000');
+  });
