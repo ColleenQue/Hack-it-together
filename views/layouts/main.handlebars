@@ -7,6 +7,9 @@
     <script src="https://kit.fontawesome.com/98fc5c884d.js" crossorigin="anonymous"></script>
 
 
+   {{#if stylesheet}}
+    <link rel="stylesheet" href="{{stylesheet}}">
+    {{/if}}
     <link rel="stylesheet" href="/public/css/style.css">
 
 </head>
@@ -52,6 +55,9 @@
     <main class="main-body">
         {{{body}}}
     </main>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src='/public/scripts/button.js'></script>
 
 </body>
 
