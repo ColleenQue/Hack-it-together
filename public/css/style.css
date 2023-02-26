@@ -1,7 +1,10 @@
 body {
     margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
   }
   
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
   /*canvas*/
   
   .middle{
@@ -24,6 +27,11 @@ body {
     position:absolute;
     height:100%;
   }
+
+  #map {
+    height: 400px;
+    width: 400px;
+}
   
   /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
   ul.topnav {
