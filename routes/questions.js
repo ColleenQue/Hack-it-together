@@ -19,7 +19,7 @@ router.get('', async (req, res) => {
       
       // Use the sort() method to shuffle the array in place
       l1.sort(getRandom);
-  res.render('pages/questions',{questions:true, listz: l1});
+  res.render('pages/questions',{questions:true, listz: l1})
 
 });
 
