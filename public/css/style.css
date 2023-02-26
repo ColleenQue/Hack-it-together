@@ -70,7 +70,7 @@
     border-radius: 25px;
     cursor: pointer;
     transition-duration: 0.4s;
-    margin: 10px;
+    margin-bottom: 20px;
   }
 
   button:hover {
