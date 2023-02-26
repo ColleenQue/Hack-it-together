@@ -14,6 +14,7 @@
   }
 
   #map {
+    z-index: -1;
     height: 800px;
     width: 800px;
 }

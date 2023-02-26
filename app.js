@@ -31,6 +31,10 @@ app.listen(PORT, () => {
 });
 */
 
+app.listen(3000, function(){
+  console.log('Your routes will be running on http://localhost:3000');
+});
+
 
 
 
