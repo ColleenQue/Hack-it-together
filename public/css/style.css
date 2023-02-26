@@ -17,6 +17,25 @@
     height: 400px;
     width: 400px;
 }
+
+  button {
+    background-color: rgba(255,255,255,0.8);
+    
+    color:rgb(0, 0, 0);
+    border: 2px solid #99ddda;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  button:hover {
+    cursor:pointer;
+    color:white;
+    background-color: #343A40
+}
   
   /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
   ul.topnav {
