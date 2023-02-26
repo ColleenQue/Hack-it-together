@@ -3,13 +3,183 @@
 <hr />
 {{!-- Map goes here --}}
 
+<div class="text-format">    
+    
 
-<div class="text-format">
-<p>Outfits are an important part of interviews. You can find a list of suggestions on this page, as well as some tips for buying/renting clothes. One cheap option is to explore the thrift stores near you!</p>
+<p>Outfits are an important part of interviews. You can find a list of suggestions on this page, as well as some tips for buying/renting clothes. </p>
+<p>One cheap option is to explore the thrift stores near you!</p>
 
 <h2>Affordable Resources</h2>
     <h3>Thrift Stores</h3>
     <p>Use the map to navigate thrift stores</p>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <div style="display: none">
+      <input
+        id="origin-input"
+        class="controls"
+        type="text"
+        placeholder="Enter an origin location"
+      />
+
+      <input
+        id="destination-input"
+        class="controls"
+        type="text"
+        placeholder="Enter a destination location"
+      />
+
+      <div id="mode-selector" class="controls">
+        <input
+          type="radio"
+          name="type"
+          id="changemode-walking"
+          checked="checked"
+        />
+        <label for="changemode-walking">Walking</label>
+
+        <input type="radio" name="type" id="changemode-transit" />
+        <label for="changemode-transit">Transit</label>
+
+        <input type="radio" name="type" id="changemode-driving" />
+        <label for="changemode-driving">Driving</label>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoE_VQv8JQz3RfB7Va-c61kqW8ZN3ir5o&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+
+
+
+<script>
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script
+// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+//This is sourced from google maps api
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    mapTypeControl: false,
+    center: { lat: -33.8688, lng: 151.2195 },
+    zoom: 18,
+  });
+
+  new AutocompleteDirectionsHandler(map);
+}
+
+class AutocompleteDirectionsHandler {
+  map;
+  originPlaceId;
+  destinationPlaceId;
+  travelMode;
+  directionsService;
+  directionsRenderer;
+  constructor(map) {
+    this.map = map;
+    this.originPlaceId = "";
+    this.destinationPlaceId = "";
+    this.travelMode = google.maps.TravelMode.WALKING;
+    this.directionsService = new google.maps.DirectionsService();
+    this.directionsRenderer = new google.maps.DirectionsRenderer();
+    this.directionsRenderer.setMap(map);
+
+    const originInput = document.getElementById("origin-input");
+    const destinationInput = document.getElementById("destination-input");
+    const modeSelector = document.getElementById("mode-selector");
+    // Specify just the place data fields that you need.
+    const originAutocomplete = new google.maps.places.Autocomplete(
+      originInput,
+      { fields: ["place_id"] }
+    );
+    // Specify just the place data fields that you need.
+    const destinationAutocomplete = new google.maps.places.Autocomplete(
+      destinationInput,
+      { fields: ["place_id"] }
+    );
+
+    this.setupClickListener(
+      "changemode-walking",
+      google.maps.TravelMode.WALKING
+    );
+    this.setupClickListener(
+      "changemode-transit",
+      google.maps.TravelMode.TRANSIT
+    );
+    this.setupClickListener(
+      "changemode-driving",
+      google.maps.TravelMode.DRIVING
+    );
+    this.setupPlaceChangedListener(originAutocomplete, "ORIG");
+    this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+  }
+  // Sets a listener on a radio button to change the filter type on Places
+  // Autocomplete.
+  setupClickListener(id, mode) {
+    const radioButton = document.getElementById(id);
+
+    radioButton.addEventListener("click", () => {
+      this.travelMode = mode;
+      this.route();
+    });
+  }
+  setupPlaceChangedListener(autocomplete, mode) {
+    autocomplete.bindTo("bounds", this.map);
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
+
+      if (!place.place_id) {
+        window.alert("Please select an option from the dropdown list.");
+        return;
+      }
+
+      if (mode === "ORIG") {
+        this.originPlaceId = place.place_id;
+      } else {
+        this.destinationPlaceId = place.place_id;
+      }
+
+      this.route();
+    });
+  }
+    route() {
+    if (!this.originPlaceId || !this.destinationPlaceId) {
+      return;
+    }
+
+    const me = this;
+
+    this.directionsService.route(
+      {
+        origin: { placeId: this.originPlaceId },
+        destination: { placeId: this.destinationPlaceId },
+        travelMode: this.travelMode,
+      },
+      (response, status) => {
+        if (status === "OK") {
+          me.directionsRenderer.setDirections(response);
+        } else {
+          window.alert("Directions request failed due to " + status);
+        }
+      }
+    );
+  }
+}
+
+window.initMap = initMap;
+</script>
 
 <h3 id="rental">Rental Services</h3>
 
@@ -52,28 +222,4 @@
 <h3 id="women">Women</h3>
 <a id="womenimg" href="/public/img/interview1.png" target="_blank"><img class="art" src="/public/img/interview1.png"
         alt="interview1"></a>
-
-
-</div>
-
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoE_VQv8JQz3RfB7Va-c61kqW8ZN3ir5o&callback=initMap&libraries=places&v=weekly"
-    defer
-></script>
-
-<div id="map"></div>
-<script>
-
-function initMap() {
-  // Create the map.
-  const pyrmont = { lat: -33.866, lng: 151.196 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: pyrmont,
-    zoom: 17,
-    mapId: "8d193001f940fde3",
-  });
-
-window.initMap = initMap;
-}
-</script>
 
