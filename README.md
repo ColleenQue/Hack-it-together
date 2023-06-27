@@ -11,3 +11,4 @@ https://devpost.com/software/interview-ace
  
 ## Render
 https://team-12.onrender.com/home 
+May take a while to load
